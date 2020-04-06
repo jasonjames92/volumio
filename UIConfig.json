@@ -1,0 +1,358 @@
+{
+	"page": {
+		"label": "TRANSLATE.HD44780.LCDCONF"
+	},
+	"sections": [{
+		"id": "section_userconf",
+		"element": "section",
+		"label": "TRANSLATE.HD44780.USERCONF",
+		"icon": "fa-user-o",
+		"onSave": {
+			"type": "controller",
+			"endpoint": "miscellanea/HD44780",
+			"method": "updateUserConfig"
+		},
+		"saveButton": {
+			"label": "TRANSLATE.HD44780.SAVE",
+			"data": [
+				"hello0",
+				"hello1",
+				"hello2",
+				"hello3",
+				"goodbye0",
+				"goodbye1",
+				"goodbye2",
+				"goodbye3",
+				"speed"
+			]
+		},
+		"content": [
+			{
+				"id": "hello0",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.HELLO",
+				"label": "TRANSLATE.HD44780.HELLO0",
+				"value": "   Welcome to"
+			},
+			{
+				"id": "hello1",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.HELLO",
+				"label": "TRANSLATE.HD44780.HELLO1",
+				"value": "   VOLUMIO2!"
+			},
+			{
+				"id": "hello2",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.HELLO",
+				"label": "TRANSLATE.HD44780.HELLO2",
+				"value": "    And also"
+			},			
+			{
+				"id": "hello3",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.HELLO",
+				"label": "TRANSLATE.HD44780.HELLO3",
+				"value": "  Cheers mate!"
+			},
+			{
+				"id": "goodbye0",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GOODBYE",
+				"label": "TRANSLATE.HD44780.GOODBYE0",
+				"value": "Thanks for using"
+			},
+			{
+				"id": "goodbye1",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GOODBYE",
+				"label": "TRANSLATE.HD44780.GOODBYE1",
+				"value": "   VOLUMIO2!"
+			},
+			{
+				"id": "goodbye2",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GOODBYE",
+				"label": "TRANSLATE.HD44780.GOODBYE2",
+				"value": "    And also"
+			},			
+			{
+				"id": "goodbye3",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GOODBYE",
+				"label": "TRANSLATE.HD44780.GOODBYE3",
+				"value": "  Cheers mate!"
+			},
+			{
+				"id": "speed",
+				"element": "select",
+				"doc": "TRANSLATE.HD44780.D_SPEED",
+				"label": "TRANSLATE.HD44780.SPEED",
+				"value": {
+					"value": 10,
+					"label": "10 (fast=default)"
+				},
+				"options": []
+			}
+		]
+	},
+	{
+		"id": "section_displayconf",
+		"element": "section",
+		"label": "TRANSLATE.HD44780.DISPLAYCONF",
+		"icon": "fa-sliders",
+		"onSave": {
+			"type": "controller",
+			"endpoint": "miscellanea/HD44780",
+			"method": "updateDisplayConfig"
+		},
+		"saveButton": {
+			"label": "TRANSLATE.HD44780.SAVE",
+			"data": [
+				"address",
+				"columns",
+				"rows",
+				"char_map"
+			]
+		},
+		"content": [
+			{
+				"id": "address",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.D_ADDRESS",
+				"label": "TRANSLATE.HD44780.ADDRESS",
+				"value": "0x3F"
+			},
+			{
+				"id": "columns",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.D_COLUMNS",
+				"label": "TRANSLATE.HD44780.COLUMNS",
+				"value": "16"
+			},
+			{
+				"id": "rows",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.D_ROWS",
+				"label": "TRANSLATE.HD44780.ROWS",
+				"value": "2"
+			},
+			{
+				"id": "char_map",
+				"element": "select",
+				"doc": "TRANSLATE.HD44780.D_CHAR_MAP",
+				"label": "TRANSLATE.HD44780.CHAR_MAP",
+				"value": {
+					"value": 0,
+					"label": "hd44780_default"
+				},
+				"options": []
+			}
+		]
+	},
+	{
+		"id": "section_mpdlcd",
+		"element": "section",
+		"label": "TRANSLATE.HD44780.MPDLCDCONF",
+		"icon": "fa-tags",
+		"onSave": {
+			"type": "controller",
+			"endpoint": "miscellanea/HD44780",
+			"method": "updateMPDLCD"
+		},
+		"saveButton": {
+			"label": "TRANSLATE.HD44780.SAVE",
+			"data": [
+				"enable_mpdlcd"
+			]
+		},
+		"content": [			
+			{
+			  "id":"enable_mpdlcd",
+			  "element": "switch",
+			  "doc": "TRANSLATE.HD44780.D_ENABLE_MPDLCD",
+			  "label": "TRANSLATE.HD44780.ENABLE_MPDLCD",
+			  "value": true
+			}
+		]
+	},
+	{
+		"id": "section_driverconf",
+		"element": "section",
+		"label": "TRANSLATE.HD44780.DRIVERCONF",
+		"icon": "fa-cogs",
+		"onSave": {
+			"type": "controller",
+			"endpoint": "miscellanea/HD44780",
+			"method": "updateDriverConfig"
+		},
+		"saveButton": {
+			"label": "TRANSLATE.HD44780.SAVE",
+			"data": [
+				"driver_path",
+				"connection_type",
+				"deviating_pins",
+				"pin_D7",
+				"pin_D6",
+				"pin_D5",
+				"pin_D4",
+				"pin_EN",
+				"pin_EN2",
+				"pin_RS",
+				"pin_BL"
+			]
+		},
+		"content": [
+			{
+				"id": "driver_path",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.D_DRIVER_PATH",
+				"label": "TRANSLATE.HD44780.DRIVER_PATH",
+				"value": "/home/volumio/raspdrivers"
+			},
+			{
+				"id": "connection_type",
+				"element": "select",
+				"doc": "TRANSLATE.HD44780.D_CONNECTION_TYPE",
+				"label": "TRANSLATE.HD44780.CONNECTION_TYPE",
+				"value": {
+					"value": 0,
+					"label": "i2c"
+				},
+				"options": []
+				
+			},
+			{
+			  "id":"deviating_pins",
+			  "element": "switch",
+			  "doc": "TRANSLATE.HD44780.D_DEVIATING_PINS",
+			  "label": "TRANSLATE.HD44780.DEVIATING_PINS",
+			  "value": false
+			},
+			{
+				"id": "pin_D7",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "D7",
+				"value": "18",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			},
+			{
+				"id": "pin_D6",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "D6",
+				"value": "23",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			},
+			{
+				"id": "pin_D5",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "D5",
+				"value": "24",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			},
+			{
+				"id": "pin_D4",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "D4",
+				"value": "25",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			},
+			{
+				"id": "pin_EN",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "EN",
+				"value": "8",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			},
+			{
+				"id": "pin_EN2",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "EN2",
+				"value": "22",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			},
+			{
+				"id": "pin_RS",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "RS",
+				"value": "7",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			},
+			{
+				"id": "pin_BL",
+				"element": "input",
+				"type": "text",
+				"doc": "TRANSLATE.HD44780.GPIO_PIN",
+				"label": "BL",
+				"value": "17",
+				"visibleIf": {
+						"field": "deviating_pins",
+						"value": true
+					}
+			}
+		]
+	},
+	{
+		"id": "section_test",
+		"element": "section",
+		"label": "Test",
+		"icon": "fa-code",
+		"onSave": {
+			"type": "controller",
+			"endpoint": "miscellanea/HD44780",
+			"method": "printToDisplay"
+		},
+		"saveButton": {
+			"label": "Print to LCD",
+			"data": []
+		},
+		"content": []
+	}]
+}

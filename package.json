@@ -1,0 +1,28 @@
+{
+  "name": "HD44780",
+  "version": "1.0.10",
+  "description": "Plugin to use any HD44780 LCD screen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saiyato",
+  "license": "",
+  "volumio_info": {
+    "prettyName": "HD44780 LCD Plugin",
+    "icon": "fa fa-microchip",
+    "plugin_type": "miscellanea"
+  },
+  "dependencies": {
+        "fs-extra": "^0.28.0",
+		"i2c-bus": "^3.2.0",
+		"kew": "^0.7.0",
+		"lcd": "^2.0.3",
+		"lcdi2c": "^1.0.6",
+		"net": "^1.0.2",
+		"onoff": "^3.1.0",
+		"q": "^1.5.1",
+		"sleep": "^5.1.1",
+		"v-conf": "^0.10.0"
+      }
+}
